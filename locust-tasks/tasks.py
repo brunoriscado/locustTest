@@ -26,7 +26,7 @@ class MetricsTaskSet(TaskSet):
     requestList = None
 
     def on_start(self):
-        pass
+        self.client.verify = False
 
     @task(10000)
     def get_requests(self):

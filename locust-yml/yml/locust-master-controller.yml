@@ -34,12 +34,12 @@ spec:
       containers:
         - name: locust
           imagePullPolicy: Always
-          image: essearch/locust-task:1.8
+          image: essearch/locust-task:1.0
           env:
             - name: LOCUST_MODE
               value: master
             - name: TARGET_HOST
-              value: "http://search-dev.api.tesco.com:80"
+              value: "https://new-ess-search-ppe1.westeurope.cloudapp.azure.com"
           ports:
             - name: loc-master-web
               containerPort: 8089

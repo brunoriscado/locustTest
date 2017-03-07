@@ -4,12 +4,10 @@
 #-p port
 #-k kubeconfig
 #-i locust-task image tag
-#
-while getopts ":h:p:k:i:w:" o; do
+#-s http/https
+while getopts ":h:k:i:w:" o; do
     case "${o}" in
         h) h=${OPTARG}
-            ;;
-        p) p=${OPTARG}
             ;;
         k) k=${OPTARG}
             ;;
@@ -22,11 +20,9 @@ while getopts ":h:p:k:i:w:" o; do
 done
 
 export target_host=$h
-export target_port=$p
 export image_version=$i
 
 echo "host: ${target_host}"
-echo "port: ${target_port}"
 echo "kubeconfig: ${k}"
 echo "image_version: ${i}"
 
