@@ -10,7 +10,7 @@ minikube start
 #-h host
 #-k kubeconfig location
 #-i docker image version
-./locust-deploy.sh -h search-dev.api.tesco.com -p 80 -k /home/bruno/.kube/config -i 1.3
+./locust-deploy.sh -h [hostname] -p 80 -k /home/bruno/.kube/config -i 1.3
 
 
 #Start swarm tests
